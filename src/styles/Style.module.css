@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(120deg, #f6d365 0%, #ff6f47 130%);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
+header,
+.form {
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputContainer {
+  width: 30%;
+  display: flex;
+}
+.input,
+.button,
+.line {
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  padding: 0.95em;
+  transition: 0.3s;
+}
+.button {
+  width: 40px;
+  padding: 1.02em;
+  color: #ff6f47;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.input:focus,
+.filterSelect:focus {
+  outline: none;
+}
+.button:hover {
+  color: white;
+  background-color: #ff6f47;
+}
+.select {
+  position: relative;
+  overflow: hidden;
+  margin: 1rem;
+  width: 20%;
+}
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1.02em;
+  background-color: #ff6f47;
+  cursor: pointer;
+  pointer-events: none;
+}
+.filterSelect {
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  color: #ff6f47;
+  font-family: 'Poppins', sans-serif;
+  padding: 1rem;
+}
+.checkButton,
+.removeButton {
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.checkButton {
+  background-color: rgb(11, 212, 162);
+}
+.removeButton {
+  background-color: #ff6f47;
+}
+.list,
+.done {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  margin: 0.5em auto;
+}
+.line {
+  text-decoration-line: line-through;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+@media only screen and (max-width: 900px) {
+  header {
+    font-size: 1.6rem;
+  }
+  .form {
+    flex-direction: column;
+  }
+  .inputContainer {
+    width: 80%;
+  }
+  .select {
+    width: 80%;
+  }
+  .list,
+  .done {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    font-size: 1.4rem;
+  }
+  .inputContainer {
+    width: 90%;
+  }
+  .select {
+    width: 90%;
+  }
+  .list,
+  .done {
+    width: 90%;
+  }
+  .checkButton,
+  .removeButton {
+    font-size: 0.9rem;
+  }
+}
